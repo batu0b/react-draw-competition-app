@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Lobster&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border z-10;
+  }
+
+  body,
+  html,
+  #root {
+    @apply min-h-screen h-full  text-bwhite   bg-bdark w-full;
+  }
+
+  input[type="text"] {
+    @apply rounded-sm shadow-inner shadow-black outline-none text-bdark;
+  }
+
+  .general-div {
+    @apply min-h-screen h-full;
+  }
+  .labelContainer {
+    @apply flex flex-col gap-1 text-bwhite font-kablammo;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-bgray;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-bdark shadow-inner shadow-black;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Track */
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-bdark;
+  }
+  /* Handle */
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-bgray shadow-inner shadow-black;
+  }
+}
+
+@layer components {
+  .mode-btn {
+    @apply bg-bwhite text-bblue p-5 h-20 w-20  rounded-full flex items-center justify-center border-4 border-bblue text-xl hover:bg-slate-300 data-[active=true]:bg-slate-300;
+  }
+}
